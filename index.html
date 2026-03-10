@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIBE RUSSIA</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+}
+
+/* HEADER */
+
+header{
+background:#1a1a1a;
+padding:20px;
+text-align:center;
+font-size:24px;
+font-weight:bold;
+letter-spacing:2px;
+border-bottom:2px solid #ff2b2b;
+}
+
+/* MENU */
+
+.menu{
+display:flex;
+justify-content:space-around;
+background:#141414;
+padding:15px;
+}
+
+.menu button{
+background:#222;
+border:none;
+color:white;
+padding:10px 15px;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.menu button:hover{
+background:#ff2b2b;
+}
+
+/* MAIN */
+
+.container{
+padding:20px;
+}
+
+.card{
+background:#1b1b1b;
+padding:20px;
+margin-bottom:15px;
+border-radius:12px;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.card h2{
+margin-bottom:10px;
+}
+
+.card button{
+margin-top:10px;
+background:#ff2b2b;
+border:none;
+padding:10px 15px;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* SERVER STATUS */
+
+.status{
+color:#4cff4c;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:15px;
+font-size:14px;
+background:#141414;
+position:fixed;
+bottom:0;
+width:100%;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+VIBE RUSSIA
+</header>
+
+<div class="menu">
+<button onclick="openPage('home')">Главная</button>
+<button onclick="openPage('servers')">Серверы</button>
+<button onclick="openPage('donate')">Донат</button>
+<button onclick="openPage('profile')">Профиль</button>
+</div>
+
+<div class="container">
+
+<div id="home" class="page">
+
+<div class="card">
+<h2>Добро пожаловать</h2>
+<p>Добро пожаловать в мир VIBE RUSSIA RP.</p>
+<p>Создай свою историю в криминальной России.</p>
+</div>
+
+<div class="card">
+<h2>Новости</h2>
+<p>🚗 Добавлены новые автомобили</p>
+<p>🏙 Новый город</p>
+<p>💰 Новые способы заработка</p>
+</div>
+
+</div>
+
+<div id="servers" class="page" style="display:none">
+
+<div class="card">
+<h2>Server 1</h2>
+<p>Игроков: 342 / 1000</p>
+<p class="status">ONLINE</p>
+<button onclick="connect()">Подключиться</button>
+</div>
+
+<div class="card">
+<h2>Server 2</h2>
+<p>Игроков: 187 / 1000</p>
+<p class="status">ONLINE</p>
+<button onclick="connect()">Подключиться</button>
+</div>
+
+</div>
+
+<div id="donate" class="page" style="display:none">
+
+<div class="card">
+<h2>VIP</h2>
+<p>Цена: 199 RUB</p>
+<button onclick="buy()">Купить</button>
+</div>
+
+<div class="card">
+<h2>PREMIUM</h2>
+<p>Цена: 399 RUB</p>
+<button onclick="buy()">Купить</button>
+</div>
+
+</div>
+
+<div id="profile" class="page" style="display:none">
+
+<div class="card">
+<h2>Профиль игрока</h2>
+<p>Ник: Player123</p>
+<p>Баланс: 15000 ₽</p>
+<p>Уровень: 5</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+VIBE RUSSIA © 2026
+</footer>
+
+<script>
+
+function openPage(page){
+
+let pages = document.querySelectorAll(".page");
+
+pages.forEach(p=>{
+p.style.display="none";
+});
+
+document.getElementById(page).style.display="block";
+
+}
+
+function connect(){
+alert("Подключение к серверу...");
+}
+
+function buy(){
+alert("Переход к оплате...");
+}
+
+</script>
+
+</body>
+</html>
